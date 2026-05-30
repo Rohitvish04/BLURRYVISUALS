@@ -51,10 +51,10 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out py-6 px-6 md:px-12 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out px-6 md:px-12 ${
           isScrolled
-            ? 'glass-nav py-4 shadow-sm'
-            : 'bg-transparent'
+            ? 'bg-white/80 backdrop-blur-md border-b border-black/10 py-4 shadow-sm'
+            : 'bg-white/40 backdrop-blur-md border-b border-black/5 py-5'
         }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
