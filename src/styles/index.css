@@ -1,0 +1,165 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=general-sans@200,300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Color System */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F5F5F3;
+  --color-card-bg: #ECEAE6;
+  --color-text-primary: #111111;
+  --color-text-secondary: #4B4B4B;
+  --color-text-muted: #7A7A7A;
+  --color-border-custom: #D9D9D9;
+  --color-silver: #C7C4BE;
+  --color-cinematic-soft: #DCE8F5;
+
+  /* Typography */
+  --font-clash: "Clash Display", "Inter", sans-serif;
+  --font-general: "General Sans", "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* Animations */
+  --animate-grain: grain 8s steps(10) infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Keyframe Animations */
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0); }
+  10% { transform:translate(-5%, -10%); }
+  20% { transform:translate(-15%, 5%); }
+  30% { transform:translate(7%, -25%); }
+  40% { transform:translate(-5%, 25%); }
+  50% { transform:translate(-15%, 10%); }
+  60% { transform:translate(15%, 0%); }
+  70% { transform:translate(0%, 15%); }
+  80% { transform:translate(3%, 35%); }
+  95% { transform:translate(-10%, 10%); }
+}
+
+/* Custom Base Styles */
+html {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-silver);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Selection Highlight */
+::selection {
+  background: var(--color-text-primary);
+  color: var(--color-bg-primary);
+}
+
+/* Premium Glassmorphism Card Utility */
+.glass-card {
+  background: rgba(236, 234, 230, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(17, 17, 17, 0.04);
+}
+
+.glass-card-dark {
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(217, 217, 217, 0.3);
+}
+
+/* Film Grain Texture */
+.film-grain {
+  position: fixed;
+  top: -150%;
+  left: -150%;
+  right: -150%;
+  bottom: -150%;
+  width: 400%;
+  height: 400%;
+  background: transparent url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.045'/%3E%3C/svg%3E") repeat;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Custom cursor hide default */
+@media (min-width: 1024px) {
+  .custom-cursor-active, 
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Editorial Title Kerning/Spacing */
+.editorial-title {
+  font-family: var(--font-clash);
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+}
+
+.sub-title {
+  font-family: var(--font-general);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Text Mask Reveal Utilities */
+.text-mask {
+  overflow: hidden;
+  position: relative;
+}
+
+.text-mask-inner {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+/* Custom Scrollbar for Lenis compatibility */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
