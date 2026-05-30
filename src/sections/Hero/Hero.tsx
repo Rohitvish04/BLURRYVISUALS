@@ -128,22 +128,22 @@ export default function Hero() {
           style={{ x: textParallaxX, y: textParallaxY }}
           className="w-full flex flex-col items-center justify-center"
         >
-          {/* Headline block (Exactly 2 major blocks) */}
+          {/* Headline block (Exactly 2 major blocks, non-wrapping on desktop/tablet) */}
           <motion.h1 
             variants={containerVariants}
             initial="initial"
             animate="animate"
-            className="font-clash font-black text-[clamp(2.4rem,7.5vw,4.5rem)] md:text-[clamp(4.2rem,9vw,6.5rem)] lg:text-[clamp(5rem,10vw,8rem)] leading-[0.88] tracking-[-0.06em] uppercase text-[#111111]"
+            className="font-clash font-black text-[clamp(2rem,6.5vw,3.2rem)] md:text-[clamp(3.2rem,7vw,4.8rem)] lg:text-[clamp(4.2rem,5.8vw,6.8rem)] leading-[0.80] tracking-[-0.05em] uppercase text-[#111111] flex flex-col items-center"
           >
             {/* Block 1 */}
-            <span className="block overflow-hidden py-3 -my-3">
+            <span className="block overflow-hidden py-1 -my-1 md:whitespace-nowrap">
               <motion.span variants={lineVariants} className="inline-block">
                 WE DON'T JUST MAKE FILMS.
               </motion.span>
             </span>
 
             {/* Block 2 */}
-            <span className="block overflow-hidden py-3 -my-3">
+            <span className="block overflow-hidden py-1 -my-1 md:whitespace-nowrap">
               <motion.span variants={lineVariants} className="inline-block">
                 WE CREATE <span className="text-[#C6A972]">EMOTIONS.</span>
               </motion.span>
