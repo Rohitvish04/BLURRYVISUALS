@@ -69,7 +69,7 @@ export default function Showreel() {
 
           {/* Bottom left stats overlay */}
           <div className="absolute bottom-6 left-6 font-general text-[8px] md:text-[10px] tracking-widest text-white/70 uppercase">
-            RUN TIME 02:45 // FORMAT ARRI RAW // TOKYO - MILAN
+            RUN TIME 02:45 // FORMAT 8K RAW // MUMBAI, INDIA
           </div>
         </motion.div>
       </div>

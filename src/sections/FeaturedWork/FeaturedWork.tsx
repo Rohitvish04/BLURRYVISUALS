@@ -8,11 +8,13 @@ import { ArrowUpRight } from 'lucide-react';
 const CATEGORIES = [
   'All',
   'Commercial Films',
+  'Corporate Videos',
+  'Restaurant Promotions',
   'Fashion Campaigns',
-  'Brand Films',
-  'Music Videos',
-  'Documentary',
-  'Corporate Cinema',
+  'Real Estate Projects',
+  'Event Films',
+  'Wedding Stories',
+  'Social Media Campaigns',
 ];
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -139,7 +141,7 @@ export default function FeaturedWork() {
             </h2>
           </div>
           <p className="font-sans text-sm text-[#4B4B4B] max-w-md font-light leading-relaxed">
-            A curated portfolio spanning luxury commercial films, cinematic fashion campaigns, music videos, and editorial documentaries.
+            A curated portfolio of premium commercials, corporate videos, restaurant promotions, real estate campaigns, and cinematic wedding stories.
           </p>
         </div>
 

@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import { ArrowUp, Instagram, Play, Compass, Linkedin } from 'lucide-react';
 
 export default function Footer() {
-  const [tokyoTime, setTokyoTime] = useState('');
-  const [milanTime, setMilanTime] = useState('');
+  const [mumbaiTime, setMumbaiTime] = useState('');
 
   useEffect(() => {
     const updateClocks = () => {
@@ -14,8 +13,7 @@ export default function Footer() {
         hour12: false,
       } as const;
 
-      setTokyoTime(new Intl.DateTimeFormat('en-US', { ...options, timeZone: 'Asia/Tokyo' }).format(new Date()));
-      setMilanTime(new Intl.DateTimeFormat('en-US', { ...options, timeZone: 'Europe/Rome' }).format(new Date()));
+      setMumbaiTime(new Intl.DateTimeFormat('en-US', { ...options, timeZone: 'Asia/Kolkata' }).format(new Date()));
     };
 
     updateClocks();
@@ -41,7 +39,7 @@ export default function Footer() {
               BLURRY VISUALS
             </h3>
             <p className="font-sans text-xs text-[#7A7A7A] max-w-xs leading-relaxed">
-              Premium visual storytelling crafted for brands, artists, and immersive digital platforms. Operating globally out of Tokyo & Milan.
+              Premium Visual Storytelling For Modern Brands. Operating out of Mumbai, India.
             </p>
           </div>
 
@@ -70,20 +68,16 @@ export default function Footer() {
           {/* Studio Clocks & Locations */}
           <div>
             <h4 className="font-general text-[10px] tracking-[0.2em] uppercase text-[#7A7A7A] mb-5">
-              WORLDTIME
+              STUDIO TIME
             </h4>
             <div className="space-y-4 font-general text-xs">
               <div className="flex justify-between items-center max-w-[200px]">
-                <span className="text-[#C7C4BE] tracking-widest">TOKYO</span>
-                <span className="tabular-nums font-mono text-[#DCE8F5]">{tokyoTime || '00:00:00'}</span>
-              </div>
-              <div className="flex justify-between items-center max-w-[200px]">
-                <span className="text-[#C7C4BE] tracking-widest">MILAN</span>
-                <span className="tabular-nums font-mono text-[#DCE8F5]">{milanTime || '00:00:00'}</span>
+                <span className="text-[#C7C4BE] tracking-widest">MUMBAI (IST)</span>
+                <span className="tabular-nums font-mono text-[#DCE8F5]">{mumbaiTime || '00:00:00'}</span>
               </div>
             </div>
             <p className="mt-6 text-[10px] font-sans text-[#7A7A7A] leading-relaxed">
-              All systems online. Syncing worldwide pipeline.
+              All systems online. Syncing local pipeline.
             </p>
           </div>
 

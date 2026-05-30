@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   const stats = [
-    { value: '120+', label: 'PRODUCTIONS DELIVERED' },
-    { value: 'TOKYO × MILAN', label: 'OPERATIONAL HUBS' },
-    { value: '8K HDR', label: 'WORKFLOW PIPELINE' },
-    { value: 'GLOBAL', label: 'PRODUCTION NETWORK' },
+    { value: '150+', label: 'PROJECTS DELIVERED' },
+    { value: '50+', label: 'HAPPY CLIENTS' },
+    { value: 'MUMBAI', label: 'STUDIO BASE' },
+    { value: '4K & 8K', label: 'PRODUCTION' },
   ];
 
   return (
@@ -24,8 +24,8 @@ export default function About() {
               WHO WE ARE
             </p>
             <h2 className="font-clash text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-[#111111] leading-none uppercase">
-              ARTIST-LED<br />
-              VISUAL LAB.
+              ABOUT OUR<br />
+              STUDIO.
             </h2>
           </div>
 
@@ -38,7 +38,7 @@ export default function About() {
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="font-clash text-2xl md:text-4xl text-[#111111] leading-snug tracking-tight font-light max-w-4xl"
             >
-              Blurry Visuals is a premium artist-led visual production studio specializing in cinematic storytelling, commercial filmmaking, and modern digital narratives.
+              Blurry Visuals Film Production is a creative film and content production studio helping brands, businesses, and creators tell compelling stories through cinematic visuals. We specialize in commercials, corporate films, social media campaigns, product videos, and branded storytelling.
             </motion.p>
 
             <motion.p
@@ -48,7 +48,7 @@ export default function About() {
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
               className="font-sans text-sm md:text-base text-[#4B4B4B] leading-relaxed font-light max-w-2xl"
             >
-              Operating at the intersection of advertising, fashion, and cinema, we orchestrate global productions. We synchronize the precision of Japanese minimalism with Italian high-fashion editorial aesthetics to deliver films that evoke deep emotional resonance.
+              Operating out of Mumbai, we focus on helping businesses grow through high-quality visual content and storytelling. We collaborate closely with startups, corporate brands, restaurants, real estate developers, and luxury clients to deliver premium visual experiences designed for modern digital landscapes.
             </motion.p>
 
             {/* Statistics Row */}
@@ -84,13 +84,13 @@ export default function About() {
               >
                 <img
                   src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=800"
-                  alt="Tokyo production unit"
+                  alt="Mumbai production unit"
                   className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-[1500ms] ease-out"
                   loading="lazy"
                 />
                 <div className="absolute bottom-4 left-4 glass-card px-4 py-2 border border-[#D9D9D9]/30">
                   <p className="font-general text-[8px] tracking-widest text-[#111111] font-semibold uppercase">
-                    UNIT TOKYO / SHINJUKU
+                    UNIT MUMBAI / PRODUCTION
                   </p>
                 </div>
               </motion.div>
@@ -105,13 +105,13 @@ export default function About() {
               >
                 <img
                   src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800"
-                  alt="Milan studio workflow"
+                  alt="Goa studio workflow"
                   className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-[1500ms] ease-out"
                   loading="lazy"
                 />
                 <div className="absolute bottom-4 left-4 glass-card px-4 py-2 border border-[#D9D9D9]/30">
                   <p className="font-general text-[8px] tracking-widest text-[#111111] font-semibold uppercase">
-                    UNIT MILAN / BRERA
+                    UNIT GOA / LANDSCAPES
                   </p>
                 </div>
               </motion.div>

@@ -17,7 +17,7 @@ export default function Services() {
             </h2>
           </div>
           <p className="font-sans text-sm text-[#4B4B4B] max-w-md font-light leading-relaxed">
-            From concept treatments to master grading codecs, our studio operates a premium digital cinema workflow designed for modern screens.
+            We offer end-to-end production capabilities, creating beautiful visual stories designed to engage clients and drive business growth.
           </p>
         </div>
 

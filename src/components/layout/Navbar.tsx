@@ -51,18 +51,18 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out px-6 md:px-12 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out px-6 md:px-12 lg:px-20 ${
           isScrolled
-            ? 'bg-white/80 backdrop-blur-md border-b border-black/10 py-4 shadow-sm'
-            : 'bg-white/40 backdrop-blur-md border-b border-black/5 py-5'
+            ? 'bg-[#F8F8F6]/85 backdrop-blur-md border-b border-[#111111]/5 py-4 lg:py-5 shadow-[0_1px_10px_rgba(17,17,17,0.01)]'
+            : 'bg-transparent border-b border-[#111111]/5 py-6 lg:py-8'
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
             onClick={() => handleNavClick('hero')}
-            className="font-clash text-lg md:text-xl font-semibold tracking-[0.15em] text-[#111111] hover:opacity-75 transition-opacity"
+            className="font-clash text-sm md:text-base font-semibold tracking-[0.25em] text-[#111111] hover:opacity-70 transition-opacity uppercase"
             data-cursor="hover"
           >
             BLURRY VISUALS
@@ -74,7 +74,7 @@ export default function Navbar() {
               <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                className="font-general text-xs tracking-[0.18em] uppercase text-[#4B4B4B] hover:text-[#111111] transition-colors relative group py-2"
+                className="font-general text-[10px] tracking-[0.2em] uppercase text-[#666666] hover:text-[#111111] transition-colors relative group py-2"
                 data-cursor="hover"
               >
                 {item.name}
@@ -84,7 +84,7 @@ export default function Navbar() {
             
             <button
               onClick={() => handleNavClick('contact')}
-              className="bg-[#111111] text-[#FFFFFF] font-general text-[10px] tracking-[0.18em] uppercase py-2.5 px-6 rounded-none hover:bg-[#4B4B4B] transition-colors cursor-pointer"
+              className="border border-[#111111]/15 text-[#111111] bg-transparent font-general text-[9px] tracking-[0.2em] uppercase py-2 px-5 rounded-none hover:bg-[#111111] hover:text-[#F8F8F6] hover:border-[#111111] transition-all duration-300 cursor-pointer"
               data-cursor="hover"
             >
               Start Project
@@ -155,7 +155,7 @@ export default function Navbar() {
                   Locations
                 </p>
                 <p className="font-sans text-xs text-[#4B4B4B]">
-                  Tokyo (Shinjuku) × Milan (Brera)
+                  Mumbai, Maharashtra, India
                 </p>
               </div>
               <div>

@@ -36,41 +36,27 @@ export default function Contact() {
                 START A DIALOGUE
               </p>
               <h2 className="font-clash text-4xl md:text-6xl font-semibold tracking-tighter text-[#111111] leading-none uppercase">
-                LET'S BUILD<br />
-                SOMETHING EPIC.
+                LET'S CREATE<br />
+                SOMETHING EXTRAORDINARY.
               </h2>
               <p className="font-sans text-sm text-[#4B4B4B] max-w-sm leading-relaxed font-light pt-2">
-                Have a campaign, film project, or story that needs high-fidelity visual execution? Drop us a line.
+                Whether you're launching a new brand, promoting a product, or telling your company's story, we're ready to bring your vision to life.
               </p>
             </div>
 
-            {/* Locations Details */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-[#D9D9D9]/50">
+            {/* Location Details */}
+            <div className="pt-6 border-t border-[#D9D9D9]/50">
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-[#111111]">
                   <MapPin className="w-4 h-4 stroke-[1.5] text-[#7A7A7A]" />
-                  <span className="font-clash text-base font-medium">UNIT TOKYO</span>
+                  <span className="font-clash text-base font-medium">MUMBAI STUDIO</span>
                 </div>
                 <p className="font-sans text-xs text-[#4B4B4B] leading-relaxed font-light">
-                  Shinjuku 3-Chome, Tokyo, JP<br />
-                  <span className="font-mono text-[10px] text-[#7A7A7A]">35.6938° N, 139.7034° E</span>
+                  Bandra West, Mumbai, Maharashtra, India<br />
+                  <span className="font-mono text-[10px] text-[#7A7A7A]">19.0596° N, 72.8295° E</span>
                 </p>
-                <a href="tel:+81300000000" className="block font-general text-[9px] tracking-wider text-[#7A7A7A] hover:text-[#111111] transition-colors uppercase">
-                  +81 3 0000 0000
-                </a>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-[#111111]">
-                  <MapPin className="w-4 h-4 stroke-[1.5] text-[#7A7A7A]" />
-                  <span className="font-clash text-base font-medium">UNIT MILAN</span>
-                </div>
-                <p className="font-sans text-xs text-[#4B4B4B] leading-relaxed font-light">
-                  Via Brera, Milan, IT<br />
-                  <span className="font-mono text-[10px] text-[#7A7A7A]">45.4719° N, 9.1897° E</span>
-                </p>
-                <a href="tel:+3902000000" className="block font-general text-[9px] tracking-wider text-[#7A7A7A] hover:text-[#111111] transition-colors uppercase">
-                  +39 02 0000 0000
+                <a href="tel:+919876543210" className="block font-general text-[9px] tracking-wider text-[#7A7A7A] hover:text-[#111111] transition-colors uppercase">
+                  +91 98765 43210
                 </a>
               </div>
             </div>
@@ -177,7 +163,7 @@ export default function Contact() {
                 className="w-full bg-[#111111] text-[#FFFFFF] font-general text-[10px] tracking-[0.2em] font-medium uppercase py-4 px-8 rounded-none hover:bg-[#4B4B4B] transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-sm group"
                 data-cursor="hover"
               >
-                Send Message
+                Start Your Project
                 <Send className="w-3.5 h-3.5 group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
               </button>
             </form>

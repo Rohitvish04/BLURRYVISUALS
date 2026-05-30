@@ -62,7 +62,7 @@ export default function PageLoader() {
           {/* Bottom Row */}
           <div className="flex justify-between items-end">
             <div className="font-general text-[9px] tracking-widest text-[#F5F5F3] opacity-40 max-w-xs hidden md:block uppercase leading-relaxed">
-              Tokyo × Milan Studio Pipeline<br />
+              Mumbai Studio Pipeline<br />
               All systems online. Core assets preloading...
             </div>
             
