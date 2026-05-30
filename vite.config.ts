@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/BLURRYVISUALS/',
+  base: process.env.VERCEL ? '/' : '/BLURRYVISUALS/',
   plugins: [react(), tailwindcss()],
 })
