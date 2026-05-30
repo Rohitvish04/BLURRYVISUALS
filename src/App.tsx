@@ -6,15 +6,11 @@ import ProjectDetails from './pages/ProjectDetails';
 import LenisProvider from './components/ui/LenisProvider';
 import FilmGrain from './components/ui/FilmGrain';
 import CustomCursor from './components/ui/CustomCursor';
-import PageLoader from './components/ui/PageLoader';
 
 export default function App() {
   return (
     <Router>
       <LenisProvider>
-        {/* Cinematic Preloader Gate */}
-        <PageLoader />
-
         {/* Global Celluloid Grain Noise Overlay */}
         <FilmGrain />
 
