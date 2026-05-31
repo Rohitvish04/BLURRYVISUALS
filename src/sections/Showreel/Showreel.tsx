@@ -17,8 +17,6 @@ export default function Showreel() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="relative aspect-[16/9] md:aspect-[21/9] bg-[#ECEAE6] overflow-hidden border border-[#D9D9D9]/50 group cursor-pointer"
           onClick={() => setIsOpen(true)}
-          data-cursor="play"
-          data-cursor-text="PLAY"
         >
           {/* Muted background video preview inside the banner */}
           <video

@@ -1,5 +1,6 @@
 @import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&f[]=general-sans@200,300,400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap');
 
 @import "tailwindcss";
 
@@ -16,9 +17,10 @@
   --color-cinematic-soft: #DCE8F5;
 
   /* Typography */
-  --font-clash: "Clash Display", "Inter", sans-serif;
-  --font-general: "General Sans", "Inter", sans-serif;
-  --font-sans: "Inter", sans-serif;
+  --font-clash: "Clash Display", "Open Sans", sans-serif;
+  --font-general: "General Sans", "Open Sans", sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Open Sans", sans-serif;
 
   /* Animations */
   --animate-grain: grain 8s steps(10) infinite;

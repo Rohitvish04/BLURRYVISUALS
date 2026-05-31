@@ -51,21 +51,98 @@ export interface JournalPost {
 
 export const projectsData: Project[] = [
   {
+    id: "anita-colm",
+    title: "ANITA & COLM",
+    subtitle: "A Romantic Summer Wedding in Kent",
+    client: "Anita & Colm",
+    category: "Event Films",
+    year: "JUL 2022",
+    location: "KENT",
+    imageUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000",
+    videoUrl: "https://player.vimeo.com/external/454877717.sd.mp4?s=a2bf753fbdb27163f91de03b9b4f6ed5e386ccfe&profile_id=164&oauth2_token_id=57447761",
+    description: "A gorgeous, emotionally charged summer wedding story shot on location in the lush gardens of Kent. Blending timeless elegance with organic intimacy, this film stands as a classic showcase of creative storytelling.",
+    credits: [
+      { role: "Director", name: "Elena Bianchi" },
+      { role: "DP", name: "Kenji Sato" },
+      { role: "Editor", name: "Alesis Vance" }
+    ],
+    specs: {
+      format: "RED V-Raptor 8K VV",
+      lens: "Cooke S7/i Primes",
+      aspect: "2.39:1 Anamorphic"
+    },
+    gallery: [
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800",
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800",
+      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=800"
+    ]
+  },
+  {
+    id: "gopalika-dhruv",
+    title: "GOPALIKA & DHRUV",
+    subtitle: "A Golden Celebration of Love & Petals",
+    client: "Gopalika & Dhruv",
+    category: "Event Films",
+    year: "NOV 2020",
+    location: "MILA",
+    imageUrl: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000",
+    videoUrl: "https://player.vimeo.com/external/454877717.sd.mp4?s=a2bf753fbdb27163f91de03b9b4f6ed5e386ccfe&profile_id=164&oauth2_token_id=57447761",
+    description: "Capturing the vibrant joy, sensory overloads, and shower of rose petals during the Haldi ceremony of Gopalika & Dhruv. Filmed with high speed and shallow depth of field to capture every micro-expression.",
+    credits: [
+      { role: "Director", name: "Arjun Verma" },
+      { role: "DP", name: "Kenji Sato" },
+      { role: "Colorist", name: "Alesis Vance" }
+    ],
+    specs: {
+      format: "ARRI ALEXA Mini LF",
+      lens: "ARRI Signature Primes",
+      aspect: "1.85:1 Flat"
+    },
+    gallery: [
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800",
+      "https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=800"
+    ]
+  },
+  {
+    id: "roma-jaskaran",
+    title: "ROMA & JASKARAN",
+    subtitle: "An Epic Royal Wedding Legacy",
+    client: "Roma & Jaskaran",
+    category: "Event Films",
+    year: "DEC 2019",
+    location: "OMAN",
+    imageUrl: "https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=1000",
+    videoUrl: "https://player.vimeo.com/external/454877717.sd.mp4?s=a2bf753fbdb27163f91de03b9b4f6ed5e386ccfe&profile_id=164&oauth2_token_id=57447761",
+    description: "An extraordinary cinematic masterpiece detailing the union of Roma and Jaskaran in Oman. Shot on high-definition cinema systems to capture the grand architecture, traditional outfits, and raw human emotions.",
+    credits: [
+      { role: "Director", name: "Rajesh Sen" },
+      { role: "DP", name: "Kenji Sato" }
+    ],
+    specs: {
+      format: "RED V-Raptor 8K VV",
+      lens: "Cooke S7/i Primes",
+      aspect: "2.39:1 Anamorphic"
+    },
+    gallery: [
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800",
+      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800"
+    ]
+  },
+  {
     id: "maserati-art-of-precision",
     title: "THE ART OF PRECISION",
     subtitle: "Maserati GranTurismo India Launch Film",
     client: "Maserati India",
     category: "Commercial Films",
     year: "2025",
-    location: "Mumbai, India",
+    location: "MUMBAI",
     imageUrl: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1600",
     videoUrl: "https://player.vimeo.com/external/435674703.sd.mp4?s=7f3af0c0f994073e5ffb650570b55ec70c2fa216&profile_id=139&oauth2_token_id=57447761",
     description: "A high-octane commercial film capturing the elegant lines and raw power of the Maserati GranTurismo. Shot on location in the architectural backdrops of Mumbai, this campaign bridges high fashion with automotive adrenaline.",
     credits: [
       { role: "Director", name: "Marco Valenti" },
       { role: "Director of Photography", name: "Kenji Sato" },
-      { role: "Executive Producer", name: "Vikram Malhotra" },
-      { role: "Editor / Colorist", name: "Alesis Vance" }
+      { role: "Executive Producer", name: "Vikram Malhotra" }
     ],
     specs: {
       format: "ARRI ALEXA 35 (LF 4.6K)",
@@ -73,8 +150,6 @@ export const projectsData: Project[] = [
       aspect: "2.39:1 Anamorphic"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800",
-      "https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=800",
       "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800"
     ]
   },
@@ -85,14 +160,13 @@ export const projectsData: Project[] = [
     client: "Vogue India",
     category: "Fashion Campaigns",
     year: "2025",
-    location: "Mumbai, India",
+    location: "MUMBAI",
     imageUrl: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600",
     videoUrl: "https://player.vimeo.com/external/538568259.sd.mp4?s=d00e6e78eb32c4a92c31e21b0b6b23a5d8935c1f&profile_id=164&oauth2_token_id=57447761",
     description: "A monochromatic, dream-like visual study of modern tailoring, architectural movement, and slow-motion shadows. This campaign explores Mumbai's heritage monuments through a high-contrast cinematic lens.",
     credits: [
       { role: "Director / Editor", name: "Elena Bianchi" },
-      { role: "Creative Lead", name: "Rohan Kapoor" },
-      { role: "Stylist", name: "Pooja Valli" }
+      { role: "Creative Lead", name: "Rohan Kapoor" }
     ],
     specs: {
       format: "RED V-Raptor 8K VV",
@@ -100,9 +174,7 @@ export const projectsData: Project[] = [
       aspect: "1.33:1 Academy"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800",
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800",
-      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=800"
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800"
     ]
   },
   {
@@ -112,14 +184,13 @@ export const projectsData: Project[] = [
     client: "Bombay Coffee House",
     category: "Restaurant Promotions",
     year: "2025",
-    location: "Bandra, Mumbai",
+    location: "BANDRA",
     imageUrl: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600",
     videoUrl: "https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0227e339f37a916e1e1273934336c1e&profile_id=139&oauth2_token_id=57447761",
     description: "A warm, atmospheric brand film capturing the artisanal craft of specialty coffee brewing and contemporary culinary design in Bandra. Focusing on organic textures, warm lighting, and intimate conversation.",
     credits: [
       { role: "Director", name: "Kabir Mehta" },
-      { role: "Cinematographer", name: "Kenji Sato" },
-      { role: "Lead Stylist", name: "Sanya Sen" }
+      { role: "Cinematographer", name: "Kenji Sato" }
     ],
     specs: {
       format: "Sony VENICE 2 (8K)",
@@ -127,8 +198,7 @@ export const projectsData: Project[] = [
       aspect: "1.85:1 Flat"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800",
-      "https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?q=80&w=800"
+      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800"
     ]
   },
   {
@@ -138,14 +208,13 @@ export const projectsData: Project[] = [
     client: "Lodha Group",
     category: "Real Estate Projects",
     year: "2024",
-    location: "Worli, Mumbai",
+    location: "WORLI",
     imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600",
     videoUrl: "https://player.vimeo.com/external/394145417.sd.mp4?s=78a7f0581335b1d40fb176b66ca2ca59f81cd420&profile_id=139&oauth2_token_id=57447761",
     description: "A cinematic walkthrough showcasing the elegant interiors and breathtaking Arabian Sea views of the new luxury residential tower in Worli. Combining fluid camera work, steadicam sweeps, and natural sunset lighting.",
     credits: [
       { role: "Director", name: "Arjun Verma" },
-      { role: "Drone Operator", name: "Amit Dev" },
-      { role: "Editor", name: "Alesis Vance" }
+      { role: "Drone Operator", name: "Amit Dev" }
     ],
     specs: {
       format: "Sony VENICE 2 (8K)",
@@ -153,82 +222,7 @@ export const projectsData: Project[] = [
       aspect: "2.39:1 Anamorphic"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800"
-    ]
-  },
-  {
-    id: "royal-udaipur-wedding",
-    title: "A ROYAL UNION",
-    subtitle: "Cinematic Udaipur Wedding Legacy",
-    client: "Aditya & Kiara",
-    category: "Wedding Stories",
-    year: "2025",
-    location: "Udaipur, Rajasthan",
-    imageUrl: "https://images.unsplash.com/photo-1478720143022-385f704d3b7e?q=80&w=1600",
-    videoUrl: "https://player.vimeo.com/external/454877717.sd.mp4?s=a2bf753fbdb27163f91de03b9b4f6ed5e386ccfe&profile_id=164&oauth2_token_id=57447761",
-    description: "A grand, emotionally resonant cinematic wedding story filmed at the Taj Lake Palace in Udaipur. Blending natural light, slow-motion raw emotion, and traditional Indian wedding elegance.",
-    credits: [
-      { role: "Director", name: "Rajesh Sen" },
-      { role: "Director of Photography", name: "Kenji Sato" },
-      { role: "Colorist", name: "Alesis Vance" }
-    ],
-    specs: {
-      format: "RED V-Raptor 8K VV",
-      lens: "Cooke S7/i Primes",
-      aspect: "2.39:1 Anamorphic"
-    },
-    gallery: [
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=800",
-      "https://images.unsplash.com/photo-1433086966358-54859d0ed716?q=80&w=800"
-    ]
-  },
-  {
-    id: "tata-summit-highlights",
-    title: "TATA INNOVATION SHIFT",
-    subtitle: "Corporate Summit Experience Film",
-    client: "Tata Group",
-    category: "Corporate Videos",
-    year: "2024",
-    location: "Mumbai, India",
-    imageUrl: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1600",
-    videoUrl: "https://player.vimeo.com/external/371434316.sd.mp4?s=71e8da6f236ef6530663884d5df68d54625b045e&profile_id=139&oauth2_token_id=57447761",
-    description: "A sleek, high-energy corporate video documenting the annual Innovation Summit. Highlighting tech exhibitions, corporate keynotes, panel discussions, and modern workplace progress.",
-    credits: [
-      { role: "Director", name: "Elena Bianchi" },
-      { role: "Camera Operator", name: "Filippo Conte" }
-    ],
-    specs: {
-      format: "ARRI ALEXA Mini LF",
-      lens: "Zeiss Supreme Primes",
-      aspect: "1.85:1 Flat"
-    },
-    gallery: [
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800"
-    ]
-  },
-  {
-    id: "lfw-fashion-week-event",
-    title: "LAKME FASHION WEEK",
-    subtitle: "Runway Highlights & Behind The Scenes",
-    client: "LFW India",
-    category: "Event Films",
-    year: "2025",
-    location: "Mumbai, India",
-    imageUrl: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1600",
-    videoUrl: "https://player.vimeo.com/external/538568259.sd.mp4?s=d00e6e78eb32c4a92c31e21b0b6b23a5d8935c1f&profile_id=164&oauth2_token_id=57447761",
-    description: "A fast-paced, high-energy event film capturing the behind-the-scenes rush, designer interviews, and runway highlights at Lakme Fashion Week.",
-    credits: [
-      { role: "Director", name: "Elena Bianchi" },
-      { role: "Lead Producer", name: "Vikram Malhotra" }
-    ],
-    specs: {
-      format: "ARRI ALEXA Mini LF",
-      lens: "Zeiss Supreme Primes",
-      aspect: "1.85:1"
-    },
-    gallery: [
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800"
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800"
     ]
   },
   {
@@ -238,13 +232,12 @@ export const projectsData: Project[] = [
     client: "The Leela Resorts",
     category: "Social Media Campaigns",
     year: "2024",
-    location: "Kumarakom, Kerala",
+    location: "KERALA",
     imageUrl: "https://images.unsplash.com/photo-1478720143022-385f704d3b7e?q=80&w=1600",
     videoUrl: "https://player.vimeo.com/external/454877717.sd.mp4?s=a2bf753fbdb27163f91de03b9b4f6ed5e386ccfe&profile_id=164&oauth2_token_id=57447761",
     description: "A serene, visually poetic social media campaign highlighting luxury wellness treatments and natural backwaters in Kerala. Designed to capture peaceful, organic lifestyle moments for digital platforms.",
     credits: [
-      { role: "Director / DP", name: "Kenji Sato" },
-      { role: "Local Producer", name: "Suresh Menon" }
+      { role: "Director / DP", name: "Kenji Sato" }
     ],
     specs: {
       format: "RED V-Raptor 8K VV",
@@ -253,6 +246,126 @@ export const projectsData: Project[] = [
     },
     gallery: [
       "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=800"
+    ]
+  },
+  {
+    id: "isha-devpal",
+    title: "ISHA & DEVPAL",
+    subtitle: "A Golden Taj Lake Palace Fairytale",
+    client: "Isha & Devpal",
+    category: "Event Films",
+    year: "FEB 2024",
+    location: "UDAIPUR",
+    imageUrl: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1000",
+    videoUrl: "https://player.vimeo.com/external/454877717.sd.mp4?s=a2bf753fbdb27163f91de03b9b4f6ed5e386ccfe&profile_id=164&oauth2_token_id=57447761",
+    description: "An elite destination wedding film captured at the Taj Lake Palace in Udaipur. Features slow-motion drone captures, intimate sunset vows, and grand visual storytelling.",
+    credits: [
+      { role: "Director", name: "Rajesh Sen" },
+      { role: "DP", name: "Amit Dev" }
+    ],
+    specs: {
+      format: "Sony VENICE 2 (8K)",
+      lens: "Zeiss Supreme Primes",
+      aspect: "2.39:1 Anamorphic"
+    },
+    gallery: [
+      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800"
+    ]
+  },
+  {
+    id: "zara-indigo",
+    title: "ZARA INDIGO",
+    subtitle: "Zara Spring Summer Campaign",
+    client: "Zara India",
+    category: "Fashion Campaigns",
+    year: "APR 2025",
+    location: "GOA",
+    imageUrl: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=1000",
+    videoUrl: "https://player.vimeo.com/external/538568259.sd.mp4?s=d00e6e78eb32c4a92c31e21b0b6b23a5d8935c1f&profile_id=164&oauth2_token_id=57447761",
+    description: "An high-fashion campaign film exploring textures, colors, and motion along the rocky shores of Goa. Shot on high-speed digital celluloid formats.",
+    credits: [
+      { role: "Director", name: "Elena Bianchi" },
+      { role: "Stylist", name: "Pooja Valli" }
+    ],
+    specs: {
+      format: "RED V-Raptor 8K VV",
+      lens: "Zeiss Supreme Primes",
+      aspect: "1.33:1 Academy"
+    },
+    gallery: [
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800"
+    ]
+  },
+  {
+    id: "kabir-riya",
+    title: "KABIR & RIYA",
+    subtitle: "A Sunset Beach Wedding Love Story",
+    client: "Kabir & Riya",
+    category: "Event Films",
+    year: "DEC 2023",
+    location: "GOA",
+    imageUrl: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1000",
+    videoUrl: "https://player.vimeo.com/external/454877717.sd.mp4?s=a2bf753fbdb27163f91de03b9b4f6ed5e386ccfe&profile_id=164&oauth2_token_id=57447761",
+    description: "A sweeping, cinematic sunset wedding film of Kabir and Riya in Goa. Emphasizing candid frames, natural lighting, and warm ocean-breeze aesthetics.",
+    credits: [
+      { role: "Director", name: "Arjun Verma" },
+      { role: "DP", name: "Kenji Sato" }
+    ],
+    specs: {
+      format: "ARRI ALEXA Mini LF",
+      lens: "ARRI Signature Primes",
+      aspect: "1.85:1 Flat"
+    },
+    gallery: [
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=800"
+    ]
+  },
+  {
+    id: "meera-siddharth",
+    title: "MEERA & SIDDHARTH",
+    subtitle: "A Tranquil Kerala Backwater Celebration",
+    client: "Meera & Siddharth",
+    category: "Event Films",
+    year: "OCT 2024",
+    location: "KERALA",
+    imageUrl: "https://images.unsplash.com/photo-1519225495810-7512c696505a?q=80&w=1000",
+    videoUrl: "https://player.vimeo.com/external/454877717.sd.mp4?s=a2bf753fbdb27163f91de03b9b4f6ed5e386ccfe&profile_id=164&oauth2_token_id=57447761",
+    description: "A serene and visually cinematic wedding film shot along the tranquil backwaters of Kerala, highlighting authentic wellness aesthetics and slow-motion organic emotions.",
+    credits: [
+      { role: "Director / DP", name: "Kenji Sato" },
+      { role: "Stylist", name: "Sanya Sen" }
+    ],
+    specs: {
+      format: "RED V-Raptor 8K VV",
+      lens: "Cooke S7/i Primes",
+      aspect: "2.39:1 Anamorphic"
+    },
+    gallery: [
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800"
+    ]
+  },
+  {
+    id: "tata-sustainability-legacy",
+    title: "TATA SUSTAINABILITY",
+    subtitle: "Tata Group Sustainability Legacy Film",
+    client: "Tata Group",
+    category: "Corporate Videos",
+    year: "2025",
+    location: "MUMBAI",
+    imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000",
+    videoUrl: "https://player.vimeo.com/external/394145417.sd.mp4?s=78a7f0581335b1d40fb176b66ca2ca59f81cd420&profile_id=139&oauth2_token_id=57447761",
+    description: "A premium corporate vision film documenting the sustainability initiatives and green energy transition of Tata Group. Shot across multiple industrial and ecological landscapes in India.",
+    credits: [
+      { role: "Director", name: "Vikram Malhotra" },
+      { role: "DP", name: "Amit Dev" }
+    ],
+    specs: {
+      format: "RED V-Raptor 8K VV",
+      lens: "Zeiss Supreme Primes",
+      aspect: "2.39:1 Anamorphic"
+    },
+    gallery: [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800"
     ]
   }
 ];

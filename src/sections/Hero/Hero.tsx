@@ -128,22 +128,22 @@ export default function Hero() {
           style={{ x: textParallaxX, y: textParallaxY }}
           className="w-full flex flex-col items-center justify-center"
         >
-          {/* Headline block (Exactly 2 major blocks, non-wrapping on desktop/tablet) */}
+          {/* Headline block (Exactly 2 major blocks, capital and bold, proper spacing & alignment) */}
           <motion.h1 
             variants={containerVariants}
             initial="initial"
             animate="animate"
-            className="font-clash font-black text-[clamp(2rem,6.5vw,3.2rem)] md:text-[clamp(3.2rem,7vw,4.8rem)] lg:text-[clamp(4.2rem,5.8vw,6.8rem)] leading-[0.80] tracking-[-0.05em] uppercase text-[#111111] flex flex-col items-center"
+            className="font-clash font-black text-[clamp(2rem,6.5vw,3.2rem)] md:text-[clamp(3.2rem,7vw,4.8rem)] lg:text-[clamp(4.2rem,5.8vw,6.8rem)] leading-[0.9] tracking-[0.02em] uppercase text-[#111111] flex flex-col items-center space-y-2 md:space-y-3 lg:space-y-4"
           >
             {/* Block 1 */}
-            <span className="block overflow-hidden py-1 -my-1 md:whitespace-nowrap">
+            <span className="block overflow-hidden py-2 -my-2 md:whitespace-nowrap">
               <motion.span variants={lineVariants} className="inline-block">
                 WE DON'T JUST MAKE FILMS.
               </motion.span>
             </span>
 
             {/* Block 2 */}
-            <span className="block overflow-hidden py-1 -my-1 md:whitespace-nowrap">
+            <span className="block overflow-hidden py-2 -my-2 md:whitespace-nowrap">
               <motion.span variants={lineVariants} className="inline-block">
                 WE CREATE <span className="text-[#C6A972]">EMOTIONS.</span>
               </motion.span>
@@ -158,13 +158,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.65 }}
-              className="mt-[40px] space-y-6 max-w-[550px] font-general text-[1.1rem] leading-[1.8] text-[#666666] font-medium"
+              className="mt-16 lg:mt-20 max-w-[620px]"
             >
-              <p>
-                Award-winning cinematic storytelling for brands, businesses, and creators.
-              </p>
-              <p className="font-sans font-light text-sm text-[#888888] leading-relaxed">
-                From concept to final delivery, we craft visual experiences that inspire, engage, and leave a lasting impression.
+              <p className="font-sans text-sm md:text-base lg:text-[1.05rem] leading-[1.8] text-[#4B4B4B] font-bold tracking-wide">
+                Award-winning cinematic storytelling for modern brands, businesses, and creators. From concept to final delivery, we craft premium visual experiences that inspire, engage, and leave a lasting impression.
               </p>
             </motion.div>
 
@@ -173,7 +170,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.75 }}
-              className="flex items-center justify-center gap-4 mt-10"
+              className="flex items-center justify-center gap-6 mt-12"
             >
               {/* Primary Button */}
               <Magnetic>

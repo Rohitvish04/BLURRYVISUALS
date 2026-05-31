@@ -1,17 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { projectsData } from '../data/mockData';
-import { ArrowLeft, Film, Cpu, Ratio } from 'lucide-react';
+import { ArrowLeft, Film, Cpu, Ratio, Play, X } from 'lucide-react';
 
 export default function ProjectDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find((p) => p.id === id);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
+    setIsPlaying(false);
   }, [id]);
 
   if (!project) {
@@ -38,16 +40,8 @@ export default function ProjectDetails() {
       
       {/* Immersive Parallax Header Banner */}
       <div className="relative w-full h-[65vh] md:h-[75vh] bg-black overflow-hidden select-none">
-        <img
-          src={project.imageUrl}
-          alt={project.title}
-          className="w-full h-full object-cover opacity-80 scale-105"
-        />
-        {/* Dark Vignette Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/35" />
-
-        {/* Back Link */}
-        <div className="absolute top-28 left-6 md:left-12 z-10">
+        {/* Back Link (Always floating on top of video/image) */}
+        <div className="absolute top-28 left-6 md:left-12 z-30">
           <button
             onClick={() => navigate('/#work')}
             className="flex items-center gap-2.5 font-general text-[10px] tracking-[0.2em] font-semibold text-white/70 hover:text-white uppercase group transition-colors cursor-pointer"
@@ -58,20 +52,70 @@ export default function ProjectDetails() {
           </button>
         </div>
 
-        {/* Title Content */}
-        <div className="absolute bottom-12 left-6 md:left-12 right-6">
-          <div className="max-w-4xl space-y-4">
-            <span className="font-general text-[10px] tracking-[0.25em] font-semibold text-[#DCE8F5] uppercase">
-              {project.category} // {project.year}
-            </span>
-            <h1 className="font-clash text-4xl md:text-6xl lg:text-7xl font-semibold text-white tracking-tighter leading-none uppercase">
-              {project.title}
-            </h1>
-            <p className="font-sans text-sm md:text-base text-white/80 font-light max-w-xl">
-              {project.subtitle}
-            </p>
+        {isPlaying ? (
+          <div className="absolute inset-0 w-full h-full bg-black z-20">
+            <video
+              src={project.videoUrl}
+              controls
+              autoPlay
+              playsInline
+              className="w-full h-full object-contain"
+              onEnded={() => setIsPlaying(false)}
+            />
+            {/* Close Video button */}
+            <button
+              onClick={() => setIsPlaying(false)}
+              className="absolute top-28 right-6 md:right-12 z-30 bg-black/60 hover:bg-black/90 text-white p-2.5 rounded-full border border-white/10 flex items-center justify-center transition-all cursor-pointer"
+              data-cursor="hover"
+            >
+              <X className="w-4 h-4" />
+            </button>
           </div>
-        </div>
+        ) : (
+          <>
+            {/* Cover Image */}
+            <img
+              src={project.imageUrl}
+              alt={project.title}
+              className="w-full h-full object-cover opacity-85 scale-105"
+            />
+            {/* Dark Vignette Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/35 pointer-events-none" />
+
+            {/* Play Button Overlay */}
+            {project.videoUrl && (
+              <div 
+                onClick={() => setIsPlaying(true)}
+                className="absolute inset-0 flex items-center justify-center cursor-pointer z-10 group"
+                data-cursor="play"
+                data-cursor-text="PLAY"
+              >
+                <motion.div
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white shadow-2xl group-hover:bg-white group-hover:text-black transition-all duration-500"
+                >
+                  <Play className="w-6 h-6 fill-current ml-1" />
+                </motion.div>
+              </div>
+            )}
+
+            {/* Title Content */}
+            <div className="absolute bottom-12 left-6 md:left-12 right-6 pointer-events-none">
+              <div className="max-w-4xl space-y-4">
+                <span className="font-general text-[10px] tracking-[0.25em] font-semibold text-[#DCE8F5] uppercase">
+                  {project.category} // {project.year}
+                </span>
+                <h1 className="font-clash text-4xl md:text-6xl lg:text-7xl font-semibold text-white tracking-tighter leading-none uppercase">
+                  {project.title}
+                </h1>
+                <p className="font-sans text-sm md:text-base text-white/80 font-light max-w-xl">
+                  {project.subtitle}
+                </p>
+              </div>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Main details content */}
