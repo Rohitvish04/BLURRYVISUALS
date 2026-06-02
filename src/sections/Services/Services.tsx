@@ -35,10 +35,7 @@ export default function Services() {
             >
               {/* Card Header */}
               <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="font-mono text-xs text-[#7A7A7A] tracking-widest font-light">
-                    {service.number}
-                  </span>
+                <div className="flex justify-end items-center">
                   {/* Subtle decorative dot */}
                   <span className="w-1.5 h-1.5 rounded-full bg-[#111111]/10 group-hover:bg-[#111111] transition-colors duration-500" />
                 </div>

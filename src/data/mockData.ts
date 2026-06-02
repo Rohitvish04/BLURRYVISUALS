@@ -72,9 +72,9 @@ export const projectsData: Project[] = [
       aspect: "2.39:1 Anamorphic"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800",
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800",
-      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=800"
+      "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?q=80&w=800",
+      "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800",
+      "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=800"
     ]
   },
   {
@@ -99,8 +99,9 @@ export const projectsData: Project[] = [
       aspect: "1.85:1 Flat"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800",
-      "https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=800"
+      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800",
+      "https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=800",
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800"
     ]
   },
   {
@@ -124,8 +125,9 @@ export const projectsData: Project[] = [
       aspect: "2.39:1 Anamorphic"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800",
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800"
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=800",
+      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800",
+      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800"
     ]
   },
   {
@@ -150,7 +152,9 @@ export const projectsData: Project[] = [
       aspect: "2.39:1 Anamorphic"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800"
+      "https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=800",
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800"
     ]
   },
   {
@@ -174,7 +178,9 @@ export const projectsData: Project[] = [
       aspect: "1.33:1 Academy"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800"
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800",
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800",
+      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=800"
     ]
   },
   {
@@ -198,7 +204,9 @@ export const projectsData: Project[] = [
       aspect: "1.85:1 Flat"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800"
+      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800",
+      "https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=800",
+      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800"
     ]
   },
   {
@@ -222,7 +230,9 @@ export const projectsData: Project[] = [
       aspect: "2.39:1 Anamorphic"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800"
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800"
     ]
   },
   {
@@ -245,7 +255,9 @@ export const projectsData: Project[] = [
       aspect: "1.85:1 VistaVision"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=800"
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800",
+      "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800",
+      "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?q=80&w=800"
     ]
   },
   {
@@ -269,7 +281,9 @@ export const projectsData: Project[] = [
       aspect: "2.39:1 Anamorphic"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800"
+      "https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=800",
+      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=800",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=800"
     ]
   },
   {
@@ -293,7 +307,9 @@ export const projectsData: Project[] = [
       aspect: "1.33:1 Academy"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800"
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800",
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800",
+      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=800"
     ]
   },
   {
@@ -317,7 +333,9 @@ export const projectsData: Project[] = [
       aspect: "1.85:1 Flat"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=800"
+      "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800",
+      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800",
+      "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=800"
     ]
   },
   {
@@ -328,7 +346,7 @@ export const projectsData: Project[] = [
     category: "Event Films",
     year: "OCT 2024",
     location: "KERALA",
-    imageUrl: "https://images.unsplash.com/photo-1519225495810-7512c696505a?q=80&w=1000",
+    imageUrl: "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?q=80&w=1000",
     videoUrl: "https://player.vimeo.com/external/454877717.sd.mp4?s=a2bf753fbdb27163f91de03b9b4f6ed5e386ccfe&profile_id=164&oauth2_token_id=57447761",
     description: "A serene and visually cinematic wedding film shot along the tranquil backwaters of Kerala, highlighting authentic wellness aesthetics and slow-motion organic emotions.",
     credits: [
@@ -341,7 +359,9 @@ export const projectsData: Project[] = [
       aspect: "2.39:1 Anamorphic"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800"
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=800",
+      "https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?q=80&w=800"
     ]
   },
   {
@@ -365,7 +385,9 @@ export const projectsData: Project[] = [
       aspect: "2.39:1 Anamorphic"
     },
     gallery: [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800"
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800"
     ]
   }
 ];
@@ -414,46 +436,46 @@ export const servicesData: Service[] = [
     capabilities: ["Multi-Cam Setups", "Highlight Reels", "On-Site Interviews", "Same-Day Delivery"]
   },
   {
-    id: "wedding-films",
-    number: "07",
-    title: "Wedding Films",
-    description: "Premium, luxury wedding stories captured through an editorial, cinematic lens. We craft emotional, timeless heirlooms of your union.",
-    capabilities: ["Destination Weddings", "Editorial Cinematic Look", "Pre-Wedding Shoots", "Same-Day Edits"]
-  },
-  {
     id: "real-estate-videos",
-    number: "08",
+    number: "07",
     title: "Real Estate Videos",
     description: "Cinematic architecture walkthroughs, luxury home showcases, and development overviews with fluid movements and natural lighting.",
     capabilities: ["Interior Steadicam", "Architecture Styling", "Twilight / Sunset Shoots", "Development Overviews"]
   },
   {
     id: "drone-cinematography",
-    number: "09",
+    number: "08",
     title: "Drone Cinematography",
     description: "Certified aerial capture using professional cinema drones for sweeping landscapes, high-speed tracking shots, and bird's-eye perspectives.",
     capabilities: ["ProRes / RAW Aerials", "FPV Flythroughs", "RTK Precision Tracking", "Certified Operations"]
   },
   {
     id: "photography",
-    number: "10",
+    number: "09",
     title: "Photography",
     description: "Premium editorial, corporate headshots, culinary spreads, and architectural photography that captures texture, light, and geometry.",
     capabilities: ["Fashion Editorial", "Architecture & Interiors", "Culinary Spreads", "Corporate Headshots"]
   },
   {
     id: "video-editing",
-    number: "11",
+    number: "10",
     title: "Video Editing",
     description: "Frame-accurate narrative editing, pacing, soundscapes, and sound design to bring together raw footage into a seamless, engaging story.",
     capabilities: ["Narrative Pacing", "Sound Design & Mix", "Asset Management", "Multi-Format Delivery"]
   },
   {
     id: "color-grading",
-    number: "12",
+    number: "11",
     title: "Color Grading",
     description: "Premium DaVinci Resolve color grading to establish cinema-grade visual tones, custom LUT profiles, and skin-tone perfection.",
     capabilities: ["Dolby Vision HDR", "Custom LUT Creation", "Film Emulation (35mm)", "Skin-Tone Calibration"]
+  },
+  {
+    id: "bespoke-projects",
+    number: "12",
+    title: "Bespoke Projects",
+    description: "Tailored production solutions for unique concepts. From music videos and documentaries to art installations and custom creative campaigns, we bring your specific vision to life.",
+    capabilities: ["Music Videos", "Creative Strategy", "Bespoke Formats", "Art Installations"]
   }
 ];
 

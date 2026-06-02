@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion';
 
 export default function About() {
-  const stats = [
-    { value: '150+', label: 'PROJECTS DELIVERED' },
-    { value: '50+', label: 'HAPPY CLIENTS' },
-    { value: 'MUMBAI', label: 'STUDIO BASE' },
-    { value: '4K & 8K', label: 'PRODUCTION' },
-  ];
-
   return (
     <section id="about" className="relative w-full bg-[#F5F5F3] py-28 px-6 md:px-12 overflow-hidden border-t border-[#D9D9D9]/50">
       {/* Decorative large watermarked background text */}
@@ -51,29 +44,8 @@ export default function About() {
               Operating out of Mumbai, we focus on helping businesses grow through high-quality visual content and storytelling. We collaborate closely with startups, corporate brands, restaurants, real estate developers, and luxury clients to deliver premium visual experiences designed for modern digital landscapes.
             </motion.p>
 
-            {/* Statistics Row */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-[#D9D9D9]">
-              {stats.map((stat, idx) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-100px' }}
-                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: idx * 0.1 }}
-                  className="space-y-2"
-                >
-                  <p className="font-clash text-xl md:text-2xl lg:text-3xl font-semibold text-[#111111] tracking-tight">
-                    {stat.value}
-                  </p>
-                  <p className="font-general text-[8px] md:text-[9px] tracking-[0.2em] text-[#7A7A7A] uppercase leading-tight font-medium">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-
             {/* Split Images Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-[#D9D9D9]">
               {/* Image Left */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.98, y: 30 }}

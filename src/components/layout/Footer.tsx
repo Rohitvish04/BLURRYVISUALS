@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowUp, Instagram, Play, Compass, Linkedin } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Footer() {
   const [mumbaiTime, setMumbaiTime] = useState('');
@@ -25,26 +26,65 @@ export default function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 25 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
+
   return (
     <footer className="bg-[#111111] text-[#FFFFFF] pt-20 pb-10 px-6 md:px-12 border-t border-[#FFFFFF]/10 relative overflow-hidden">
-      {/* Subtle background glow */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#DCE8F5]/5 blur-[120px] rounded-full pointer-events-none" />
+      
+      {/* Drifting Golden Ambient Background Glow */}
+      <motion.div 
+        animate={{
+          scale: [1, 1.15, 1],
+          opacity: [0.4, 0.6, 0.4],
+          x: [0, 15, 0],
+          y: [0, -15, 0]
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="absolute bottom-0 right-0 w-96 h-96 bg-[#C6A972]/5 blur-[100px] rounded-full pointer-events-none" 
+      />
 
-      <div className="max-w-7xl mx-auto">
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        className="max-w-7xl mx-auto"
+      >
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-[#FFFFFF]/10">
+          
           {/* Brand Col */}
-          <div className="space-y-4">
+          <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="font-clash text-2xl font-semibold tracking-widest text-[#FFFFFF]">
               BLURRY VISUALS
             </h3>
             <p className="font-sans text-xs text-[#7A7A7A] max-w-xs leading-relaxed">
               Premium Visual Storytelling For Modern Brands. Operating out of Mumbai, India.
             </p>
-          </div>
+          </motion.div>
 
           {/* Navigation Col */}
-          <div>
+          <motion.div variants={itemVariants}>
             <h4 className="font-general text-[10px] tracking-[0.2em] uppercase text-[#7A7A7A] mb-5">
               INDEX
             </h4>
@@ -56,17 +96,18 @@ export default function Footer() {
                       const el = document.getElementById(link.toLowerCase());
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="font-general text-xs tracking-[0.1em] text-[#C7C4BE] hover:text-[#FFFFFF] transition-colors"
+                    className="relative group/link font-general text-xs tracking-[0.1em] text-[#C7C4BE] hover:text-[#FFFFFF] transition-colors py-0.5 cursor-pointer"
                   >
                     {link}
+                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#C6A972] transition-all duration-300 group-hover/link:w-full" />
                   </button>
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Studio Clocks & Locations */}
-          <div>
+          <motion.div variants={itemVariants}>
             <h4 className="font-general text-[10px] tracking-[0.2em] uppercase text-[#7A7A7A] mb-5">
               STUDIO TIME
             </h4>
@@ -76,84 +117,83 @@ export default function Footer() {
                 <span className="tabular-nums font-mono text-[#DCE8F5]">{mumbaiTime || '00:00:00'}</span>
               </div>
             </div>
-            <p className="mt-6 text-[10px] font-sans text-[#7A7A7A] leading-relaxed">
+            <p className="mt-6 text-[10px] font-sans text-[#7A7A7A] leading-relaxed flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               All systems online. Syncing local pipeline.
             </p>
-          </div>
+          </motion.div>
 
           {/* Contact Direct */}
-          <div className="space-y-4">
+          <motion.div variants={itemVariants} className="space-y-4">
             <h4 className="font-general text-[10px] tracking-[0.2em] uppercase text-[#7A7A7A] mb-1">
               DIRECT LINE
             </h4>
             <a
               href="mailto:studio@blurryvisuals.com"
-              className="block font-clash text-lg md:text-xl text-[#FFFFFF] hover:text-[#C7C4BE] transition-colors break-words"
+              className="relative inline-block font-clash text-lg md:text-xl text-[#FFFFFF] hover:text-[#C6A972] transition-colors break-words group/email py-1"
               data-cursor="hover"
             >
               studio@blurryvisuals.com
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#C6A972] transition-all duration-500 group-hover/email:w-full" />
             </a>
+            
             <div className="flex gap-4 pt-2">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-[#FFFFFF]/10 flex items-center justify-center text-[#7A7A7A] hover:text-[#FFFFFF] hover:border-[#FFFFFF] transition-all"
-                data-cursor="hover"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://vimeo.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-[#FFFFFF]/10 flex items-center justify-center text-[#7A7A7A] hover:text-[#FFFFFF] hover:border-[#FFFFFF] transition-all"
-                data-cursor="hover"
-              >
-                <Play className="w-4 h-4 fill-current" />
-              </a>
-              <a
-                href="https://behance.net"
-                target="_blank"
-                rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-[#FFFFFF]/10 flex items-center justify-center text-[#7A7A7A] hover:text-[#FFFFFF] hover:border-[#FFFFFF] transition-all"
-                data-cursor="hover"
-              >
-                <Compass className="w-4 h-4" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-8 h-8 rounded-full border border-[#FFFFFF]/10 flex items-center justify-center text-[#7A7A7A] hover:text-[#FFFFFF] hover:border-[#FFFFFF] transition-all"
-                data-cursor="hover"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
+              {[
+                { icon: Instagram, href: 'https://instagram.com' },
+                { icon: Play, href: 'https://vimeo.com', fill: true },
+                { icon: Compass, href: 'https://behance.net' },
+                { icon: Linkedin, href: 'https://linkedin.com' }
+              ].map((soc, idx) => (
+                <motion.a
+                  key={idx}
+                  href={soc.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-8 h-8 rounded-full border border-[#FFFFFF]/10 flex items-center justify-center text-[#7A7A7A] hover:text-[#FFFFFF] hover:border-[#FFFFFF] transition-colors"
+                  data-cursor="hover"
+                >
+                  <motion.div whileHover={{ rotate: 10 }}>
+                    <soc.icon className={`w-4 h-4 ${soc.fill ? 'fill-current' : ''}`} />
+                  </motion.div>
+                </motion.a>
+              ))}
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 font-general text-[10px] tracking-widest text-[#7A7A7A] uppercase">
+        <motion.div 
+          variants={itemVariants}
+          className="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 font-general text-[10px] tracking-widest text-[#7A7A7A] uppercase"
+        >
           <div>
             © {new Date().getFullYear()} BLURRY VISUALS. ALL RIGHTS RESERVED.
           </div>
           <div className="flex gap-6">
-            <a href="#privacy" className="hover:text-[#FFFFFF] transition-colors">Privacy Policy</a>
-            <a href="#terms" className="hover:text-[#FFFFFF] transition-colors">Terms of Service</a>
+            <a href="#privacy" className="relative group/botlink hover:text-[#FFFFFF] transition-colors">
+              Privacy Policy
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#C6A972] transition-all duration-300 group-hover/botlink:w-full" />
+            </a>
+            <a href="#terms" className="relative group/botlink hover:text-[#FFFFFF] transition-colors">
+              Terms of Service
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#C6A972] transition-all duration-300 group-hover/botlink:w-full" />
+            </a>
           </div>
           {/* Scroll to Top */}
-          <button
+          <motion.button
+            whileHover={{ y: -3, borderColor: '#FFFFFF' }}
+            whileTap={{ scale: 0.95 }}
             onClick={scrollToTop}
             className="w-10 h-10 border border-[#FFFFFF]/10 hover:border-[#FFFFFF] flex items-center justify-center transition-colors cursor-pointer"
             aria-label="Scroll to Top"
             data-cursor="hover"
           >
             <ArrowUp className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
+          </motion.button>
+        </motion.div>
+      </motion.div>
     </footer>
   );
 }

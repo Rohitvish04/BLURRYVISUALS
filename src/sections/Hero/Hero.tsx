@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion, useMotionValue, useSpring, useScroll, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useScroll, useTransform, useMotionTemplate } from 'framer-motion';
 
 // Reusable Magnetic Hover Component
 function Magnetic({ children }: { children: React.ReactElement }) {
@@ -50,12 +50,15 @@ export default function Hero() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const springConfig = { stiffness: 45, damping: 18 };
+  const springConfig = { stiffness: 120, damping: 24, mass: 0.5 };
   const mouseXSpring = useSpring(mouseX, springConfig);
   const mouseYSpring = useSpring(mouseY, springConfig);
 
   const textParallaxX = useTransform(mouseXSpring, [-0.5, 0.5], [-12, 12]);
   const textParallaxY = useTransform(mouseYSpring, [-0.5, 0.5], [-12, 12]);
+
+  const glowX = useTransform(mouseXSpring, [-0.5, 0.5], ['25%', '75%']);
+  const glowY = useTransform(mouseYSpring, [-0.5, 0.5], ['20%', '80%']);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -88,21 +91,28 @@ export default function Hero() {
     initial: {},
     animate: {
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.08,
       },
     },
   };
 
-  const lineVariants = {
+  const line1Words = ["WE", "DON'T", "JUST", "MAKE", "FILMS."];
+  const line2Words = [
+    { text: "WE", color: "text-[#111111]" },
+    { text: "CREATE", color: "text-[#111111]" },
+    { text: "EMOTIONS.", color: "text-[#C6A972] drop-shadow-[0_0_15px_rgba(198,169,114,0.15)]" }
+  ];
+
+  const wordVariants = {
     initial: { y: '105%', opacity: 0 },
     animate: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1.2,
-        ease: [0.16, 1, 0.3, 1] as const,
-      },
-    },
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1] as const
+      }
+    }
   };
 
   return (
@@ -110,11 +120,11 @@ export default function Hero() {
       id="hero"
       className="relative w-full min-h-screen lg:h-[100vh] flex items-center justify-center overflow-hidden bg-[#F8F8F6] px-6 md:px-12 lg:px-20 py-24 lg:py-0 select-none"
     >
-      {/* Soft Ambient Glow in the upper right background */}
-      <div 
-        className="absolute inset-0 z-0 pointer-events-none opacity-50"
+      {/* Interactive ambient light leak that follows mouse pointer */}
+      <motion.div 
+        className="absolute inset-0 z-0 pointer-events-none opacity-60"
         style={{
-          background: `radial-gradient(circle 800px at 75% 25%, rgba(198, 169, 114, 0.07), transparent 85%)`,
+          background: useMotionTemplate`radial-gradient(circle 800px at ${glowX} ${glowY}, rgba(198, 169, 114, 0.08), rgba(220, 232, 245, 0.04) 50%, transparent 80%)`,
         }}
       />
 
@@ -135,20 +145,36 @@ export default function Hero() {
             animate="animate"
             className="font-clash font-black text-[clamp(2rem,6.5vw,3.2rem)] md:text-[clamp(3.2rem,7vw,4.8rem)] lg:text-[clamp(4.2rem,5.8vw,6.8rem)] leading-[0.9] tracking-[0.02em] uppercase text-[#111111] flex flex-col items-center space-y-2 md:space-y-3 lg:space-y-4"
           >
-            {/* Block 1 */}
-            <span className="block overflow-hidden py-2 -my-2 md:whitespace-nowrap">
-              <motion.span variants={lineVariants} className="inline-block">
-                WE DON'T JUST MAKE FILMS.
-              </motion.span>
+            {/* Line 1 */}
+            <span className="flex flex-wrap justify-center gap-x-[0.28em] overflow-hidden py-2 -my-2">
+              {line1Words.map((word, idx) => (
+                <span key={idx} className="inline-block overflow-hidden py-1 -my-1">
+                  <motion.span variants={wordVariants} className="inline-block font-clash font-black">
+                    {word}
+                  </motion.span>
+                </span>
+              ))}
             </span>
 
-            {/* Block 2 */}
-            <span className="block overflow-hidden py-2 -my-2 md:whitespace-nowrap">
-              <motion.span variants={lineVariants} className="inline-block">
-                WE CREATE <span className="text-[#C6A972]">EMOTIONS.</span>
-              </motion.span>
+            {/* Line 2 */}
+            <span className="flex flex-wrap justify-center gap-x-[0.28em] overflow-hidden py-2 -my-2">
+              {line2Words.map((word, idx) => (
+                <span key={idx} className="inline-block overflow-hidden py-1 -my-1">
+                  <motion.span variants={wordVariants} className={`inline-block font-clash font-black ${word.color}`}>
+                    {word.text}
+                  </motion.span>
+                </span>
+              ))}
             </span>
           </motion.h1>
+
+          {/* Thin elegant horizontal line */}
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            className="w-16 h-[1px] bg-[#C6A972] my-8 origin-center"
+          />
 
           {/* Subheading & Buttons Container */}
           <div className="flex flex-col items-center justify-center text-center">
@@ -157,10 +183,10 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.65 }}
-              className="mt-16 lg:mt-20 max-w-[620px]"
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
+              className="mt-4 lg:mt-6 max-w-[620px]"
             >
-              <p className="font-sans text-sm md:text-base lg:text-[1.05rem] leading-[1.8] text-[#4B4B4B] font-bold tracking-wide">
+              <p className="font-general text-sm md:text-base lg:text-[1.05rem] leading-[1.8] text-[#4B4B4B] font-medium tracking-wide">
                 Award-winning cinematic storytelling for modern brands, businesses, and creators. From concept to final delivery, we craft premium visual experiences that inspire, engage, and leave a lasting impression.
               </p>
             </motion.div>
@@ -169,7 +195,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.75 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.35 }}
               className="flex items-center justify-center gap-6 mt-12"
             >
               {/* Primary Button */}
@@ -208,7 +234,7 @@ export default function Hero() {
         onClick={handleScrollToWork}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.8 }}
+        transition={{ delay: 0.55, duration: 0.6 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2.5 cursor-pointer"
         data-cursor="hover"
       >
